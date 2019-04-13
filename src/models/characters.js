@@ -22,4 +22,14 @@ Characters.prototype.getData = function () {
   });
 };
 
+Characters.prototype.getEpisodes = function () {
+  const request = new RequestHelper('https://rickandmortyapi.com/api/episode');
+  request.get().then( (data) => {
+    this.episodeData = data;
+    // list_episode_names = for each i in data.results return i.name (push into array)
+    // PubSub.publish('Characters:episode-characters', this.charactersData);
+    console.log(this.episodeData);
+  });
+};
+
 module.exports = Characters;

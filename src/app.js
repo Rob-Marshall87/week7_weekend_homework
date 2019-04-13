@@ -4,7 +4,7 @@ const CharacterListView = require('./views/character_list_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 
-
   const characters = new Characters;
   characters.getData();
+  characters.getEpisodes();
 });
